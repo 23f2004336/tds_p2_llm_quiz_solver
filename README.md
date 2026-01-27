@@ -73,22 +73,19 @@ docker build -t tds-llm-solver .
 docker run --env-file .env tds-llm-solver
 
 🗂 Folder Structure
-tds_p2_llm_quiz_solver/
+p2/
 │
-├── main.py
-├── requirements.txt
-├── Dockerfile
-├── .env.example
-├── solver/
-│   ├── agent.py
-│   ├── llm_adapter.py
-│   └── prompt_manager.py
-├── utils/
-│   ├── config.py
-│   └── logger.py
-├── tests/
-│   └── test_agent.py
-└── README.md
+├── hybrid_tools/          # Utility and helper modules
+│
+├── api_key_rotator.py     # Handles API key rotation for LLM requests
+├── hybrid_agent.py        # Core LLM agent logic
+├── hybrid_main.py         # Main entry point of the application
+├── remote_logger.py       # Remote logging functionality
+│
+├── pyproject.toml         # Project configuration and dependencies
+├── Dockerfile             # Docker configuration for containerized execution
+└── README.md              # Project documentation
+
 
 🎓 Academic Context
 
