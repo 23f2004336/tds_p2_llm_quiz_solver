@@ -1,97 +1,109 @@
-TDS LLM Quiz Solver
+🤖 LLM Quiz Solver – TDS Project 2
 
-Autonomous LLM Agent for TDS Quiz Solving — a Python-based intelligent agent designed to autonomously solve structured quizzes using large language models. Built as part of the TDS Project 2 (Roll No: 23f2004336), this solution integrates LLM reasoning, automated workflow execution, and extensible plugin support for quiz formats.
+Tools in Data Science | IIT Madras BS (Diploma in Data Science)
 
-📌 Description
+An intelligent Python-based application that uses a Large Language Model (LLM) to automatically solve quiz-style questions.
+This project was developed as part of Tools in Data Science (TDS) course in the IIT Madras BS in Data Science program.
 
-TDS LLM Quiz Solver is a modular, Python-first autonomous agent that leverages large language models (LLMs) to interpret, reason, and solve quiz questions with minimal human intervention. This project provides clear APIs, environment configuration, and execution scripts for producing high-accuracy quiz solutions in an automated pipeline.
+📌 Project Overview
 
-🧰 Tech Stack
+The LLM Quiz Solver is designed to:
 
-Python 3.10+ — core application and logic
+Read and understand quiz questions
 
-LLM Integration — OpenAI API (GPT family)
+Use an LLM for reasoning and answer generation
 
-Docker — containerized runtime environment
+Produce structured outputs automatically
 
-GitHub Actions — (optional) CI/CD
+Run as a standalone script or inside Docker
 
-Requirements Management — requirements.txt
+This project demonstrates practical usage of:
 
-⭐ Features
+API-based AI models
 
-✔ Autonomous LLM-based quiz interpretation
-✔ Modular agent pipeline for extensibility
-✔ Configurable prompts & chain logic
-✔ CLI execution & script usage
-✔ Dockerized runtime for consistency
-✔ MIT licensed
+Python automation
+
+Modular project design
+
+Environment-based configuration
+
+🧠 Tech Stack
+
+Python 3.10+
+
+Large Language Model (OpenAI API)
+
+Docker
+
+Environment Variables (.env)
+
+GitHub
+
+✨ Features
+
+✅ Automatically solves quiz questions
+✅ Uses LLM for reasoning and response generation
+✅ Modular and clean code structure
+✅ Supports environment-based configuration
+✅ Dockerized for portability
+✅ Easy to extend for other question formats
 
 ⚙ Installation
 
-Follow these steps to get set up locally:
-
-Clone the repository
-
+1️⃣ Clone the repository
 git clone https://github.com/23f2004336/tds_p2_llm_quiz_solver.git
 cd tds_p2_llm_quiz_solver
 
+2️⃣ Create virtual environment
+python -m venv venv
+source venv/bin/activate   # Windows: venv\Scripts\activate
 
-Create a Python virtual environment
-
-python3 -m venv venv
-source venv/bin/activate
-
-
-Install dependencies
-
-pip install --upgrade pip
+3️⃣ Install dependencies
 pip install -r requirements.txt
 
-
-Configure environment variables
-Create a .env file and add your API keys (e.g., OpenAI key):
-
+4️⃣ Setup environment variables
+Create a .env file:
 OPENAI_API_KEY=your_api_key_here
 
 ▶ How to Run
-🐍 Direct Python
+Run using Python
 python main.py
-
-🧠 Use CLI
-python run_quiz_solver.py --input quiz_questions.json
-
-🐳 Docker (optional)
-
-Build image
-
-docker build -t tds_quiz_solver .
-
-
-Run container
-
-docker run --env-file .env tds_quiz_solver
-
-
-Replace quiz_questions.json with your quiz input payload.
+Run using Docker
+docker build -t tds-llm-solver .
+docker run --env-file .env tds-llm-solver
 
 🗂 Folder Structure
 tds_p2_llm_quiz_solver/
-├── README.md
-├── requirements.txt
-├── .env.example
+│
 ├── main.py
-├── run_quiz_solver.py
+├── requirements.txt
+├── Dockerfile
+├── .env.example
 ├── solver/
-│   ├── __init__.py
 │   ├── agent.py
-│   ├── prompt_manager.py
 │   ├── llm_adapter.py
+│   └── prompt_manager.py
 ├── utils/
 │   ├── config.py
-│   ├── logger.py
+│   └── logger.py
 ├── tests/
-│   ├── test_llm_adapter.py
 │   └── test_agent.py
-├── Dockerfile
-└── LICENSE
+└── README.md
+
+🎓 Academic Context
+
+This project was completed as part of:
+
+Tools in Data Science (TDS)
+Diploma in Data Science
+IIT Madras BS Degree Programme
+
+It focuses on applying:
+
+APIs
+
+Automation
+
+Software engineering practices
+
+AI-assisted problem solving
